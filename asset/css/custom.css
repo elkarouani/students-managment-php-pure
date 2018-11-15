@@ -1,0 +1,22 @@
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.student-img {
+	margin: 0 auto;
+}
+
+.modal table {
+	margin-bottom: 0px; 
+}
+
+.btn, 
+.modal-content,
+.form-control {
+	border-radius: 0 
+}
+
+.border-danger {
+	border: 1px solid #f00; 
+}
