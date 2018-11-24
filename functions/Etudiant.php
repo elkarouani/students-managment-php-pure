@@ -20,7 +20,6 @@ class Etudiant {
 	public function inserer() {
 		$sql = "INSERT INTO etudiants VALUES(?, ?, ?, ?, ?)";
 		$params = [$this->cne, $this->nom, $this->prenom, $this->date_naissance, $this->photo];
-  		die(var_dump(setData($sql, $params)));
-  		return 1;
+  		return setData($sql, $params);
 	}
 }

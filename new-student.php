@@ -17,7 +17,7 @@
 		$errors['nom'] = (!preg_match("#^[a-zA-Z\_\_s]{3,15}$#", $_POST['nom'])) 
 						 ? "Le format de nom est n'est pas valide " 
 						 : '';
-		$errors['prenom'] = (!preg_match("#^[a-zA-Z\_\_s]{3,15}$#", $_POST['prenom'])) 
+		$errors['prenom'] = (!preg_match("#^[a-zA-Z\_\_s ]{3,15}$#", $_POST['prenom'])) 
 						 ? "Le format de prenom est n'est pas valide " 
 						 : '';
 		if (!isset($_FILES['image']) || !in_array(strchr($_FILES['image']['name'], "."), ['.png', '.jpg', '.gif'])) {
@@ -167,7 +167,7 @@
 			</div>
 			<div class="col-md-3 text-right">
 				<div class="thumbnail pull-right  <?= isset($errors['image']) && !empty($errors['image']) ? 'border-danger' : '' ?>" style="width: 235px;">
-			      <img style="width: 100%; height: 200px; display: block;" class="img-responsive" id="image" src="uploads/images/default.jpg">
+			      <img style="width: 100%; height: 200px; display: block;" class="img-responsive" id="image" src="asset/img/default.png">
 			      <div class="caption">
 			      	<input type="file" id="fileImage" name="image" onchange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])" style='display:none' >
                     <button type="button" id="btnChangeImage" class="btn btn-primary btn-sm btn-block"> 

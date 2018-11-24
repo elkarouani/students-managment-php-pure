@@ -21,7 +21,11 @@
 
     function setData($req, $params)
     {
-        global $pdo;
-        $stmt = $pdo->prepare($req);
-        return $stmt->execute($params);
+        try {
+            global $pdo;
+            $stmt = $pdo->prepare($req);
+            return $stmt->execute($params);
+        } catch (Exception $e) {
+            return $e;
+        }
     }

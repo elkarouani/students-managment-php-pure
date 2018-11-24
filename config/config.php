@@ -1,6 +1,6 @@
 <?php 
 
-	$dbName   = 'tp-php-1';
+	$dbName   = 'students-managment';
 	$host     = 'localhost';
 	$userName = 'root';
 	$password = '';
